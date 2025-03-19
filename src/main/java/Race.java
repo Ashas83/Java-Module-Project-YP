@@ -33,4 +33,5 @@ public class Race {
     public double calculateDistance(Car car) {
         return car.getSpeed() * 24; // Расстояние = скорость * время (24 часа)
     }
+
 }
