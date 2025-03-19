@@ -54,12 +54,19 @@ public class Main {
         Race race = new Race(updatedCarsNew);
 
         // Определяем лидера
-        Car leader = race.getLeader();
+        ArrayList<Car> leaders = race.getLeaders();
 
         // Выводим результат
-        System.out.println("Автомобиль с наибольшим пройденным расстоянием: " + leader.getName());
-        System.out.println("Пройденное расстояние: " + race.calculateDistance(leader) + " км");
-
+        if (leaders.size() == 1) {
+            Car leader = leaders.get(0);
+            System.out.println("Автомобиль с наибольшим пройденным расстоянием: " + leader.getName());
+            System.out.println("Пройденное расстояние: " + race.calculateDistance(leader) + " км");
+        } else {
+            System.out.println("Автомобили с наибольшим пройденным расстоянием:");
+            for (Car leader : leaders) {
+                System.out.println(leader.getName() + " - Пройденное расстояние: " + race.calculateDistance(leader) + " км");
+            }
+        }
     }
 
     // Метод для проверки, что строка является корректным именем автомобиля

@@ -10,20 +10,23 @@ public class Race {
         this.cars = cars;
     }
 
-    // Метод для определения автомобиля с наибольшим пройденным расстоянием
-    public Car getLeader() {
-        Car leader = null;
+    // Метод для определения автомобилей с наибольшим пройденным расстоянием
+    public ArrayList<Car> getLeaders() {
+        ArrayList<Car> leaders = new ArrayList<>();
         double maxDistance = 0;
 
         for (Car car : cars) {
             double distance = calculateDistance(car);
             if (distance > maxDistance) {
                 maxDistance = distance;
-                leader = car;
+                leaders.clear();
+                leaders.add(car);
+            } else if (distance == maxDistance) {
+                leaders.add(car);
             }
         }
 
-        return leader;
+        return leaders;
     }
 
     // Метод для расчета пройденного расстояния
