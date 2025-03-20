@@ -10,7 +10,7 @@ public class Race {
         this.cars = cars;
     }
 
-    // Метод для определения автомобилей с наибольшим пройденным расстоянием
+    // Метод для определения автомобилей с наибольшим пройденным расстоянием!
     public ArrayList<Car> getLeaders() {
         ArrayList<Car> leaders = new ArrayList<>();
         double maxDistance = 0;
