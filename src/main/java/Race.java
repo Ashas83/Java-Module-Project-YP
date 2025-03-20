@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-// Класс, в котором рассчитывается и запоминается лидер
+// Класс, в котором рассчитывается и запоминается лидер!
 
 public class Race {
     private ArrayList<Car> cars;  // Список автомобилей
